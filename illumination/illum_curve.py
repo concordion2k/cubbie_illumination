@@ -14,4 +14,14 @@ while bright < .98:
         counter = counter + increment
         bright = (amplitude * math.sin(wavelength * (counter + xTransform))) + yTransform
         print "*" * int(bright * 100)
-        time.sleep(increment)
+        print "Brightness: " + str(bright)
+	print "Counter: " + str(counter)
+	time.sleep(increment)
+
+while bright > 0:
+        counter = counter - increment
+        bright = (amplitude * math.sin(wavelength * (counter + xTransform))) + yTransform
+        print "*" * int(bright * 100)
+        print "Brightness: " + str(bright)
+	print "Counter: " + str(counter)
+	time.sleep(increment)

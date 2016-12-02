@@ -10,6 +10,7 @@ wavelength = 2
 xTransform = 0.8
 yTransform = .5
 
+# Illuminate LED...
 while bright < .98:
         counter = counter + increment
         bright = (amplitude * math.sin(wavelength * (counter + xTransform))) + yTransform
@@ -18,6 +19,7 @@ while bright < .98:
 	print "Counter: " + str(counter)
 	time.sleep(increment)
 
+# Gradually dim / turn off LED...
 while bright > 0:
         counter = counter - increment
         bright = (amplitude * math.sin(wavelength * (counter + xTransform))) + yTransform

@@ -14,16 +14,16 @@ yTransform = .5
 while bright < .98:
         counter = counter + increment
         bright = (amplitude * math.sin(wavelength * (counter + xTransform))) + yTransform
-        print "*" * int(bright * 100)
-        print "Brightness: " + str(bright)
-	print "Counter: " + str(counter)
+        print "b: " + format(bright, '.4f') + " | " + "c: " + format(counter, '.2f') + " | ",
+	print "*" * int(bright * 100)
+	print "|"
 	time.sleep(increment)
 
 # Gradually dim / turn off LED...
 while bright > 0:
         counter = counter - increment
         bright = (amplitude * math.sin(wavelength * (counter + xTransform))) + yTransform
+        print "b: " + format(bright, '.4f') + " | " + "c: " + format(counter, '.2f') + " | ",
         print "*" * int(bright * 100)
-        print "Brightness: " + str(bright)
-	print "Counter: " + str(counter)
+        print "|"
 	time.sleep(increment)

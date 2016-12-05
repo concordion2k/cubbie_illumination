@@ -13,7 +13,7 @@ class illumination:
         xTransform = 0.8
         yTransform = 0.5
 
-	def illuminate(self):
+	def turnOn(self):
 		
 		# Illuminate LED...
 		while self.bright < 1:

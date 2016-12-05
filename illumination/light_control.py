@@ -3,5 +3,5 @@ from illuminate import *
 illum = illumination()
 print "Class assigned"
 
-illum.illuminate()
+illum.turnOn()
 illum.turnOff()

@@ -7,10 +7,10 @@ class illumination:
 	pi = math.pi
         counter = 0.0
         bright = 0.0
-        increment = 0.1
+        increment = 0.05
         amplitude = 0.5
-        wavelength = -(pi/2)
-        xTransform = 0.8
+        wavelength = -2 * (pi/2)
+        xTransform = .5
         yTransform = 0.5
 
 	def turnOn(self):
@@ -25,7 +25,7 @@ class illumination:
 			time.sleep(self.increment)
 
 	def turnOff(self):
-	
+		
 		# Gradually dim / turn off LED...
 		while self.bright > 0:
         		self.counter = self.counter - self.increment
